@@ -161,7 +161,7 @@ Images and background images were sourced from getty images and from Unsplash.
 
 ---
 
-### 🔮 Future Enhancements
+### Future Enhancements
 
 * **Timer per Question**: Add countdowns for each question to increase challenge.
 * **High Score Tracking**: Store top scores using `localStorage` to encourage replay.
@@ -295,8 +295,28 @@ _Any changes needed to the website can be made, committed, and pushed to GitHub.
 
 [Back to top](#contents)
 
+
 # Credits
 
 - Insightful feedback, advice and support:
 
-  - [Simen Daehlin](https://github.com/Eventyret "Simen Daehlin") # quizitch-the-hp-quiz
+    - [Simen Daehlin](https://github.com/Eventyret "Simen Daehlin") # quizitch-the-hp-quiz
+
+
+- Code inspiration and learning content:
+
+    - [Love Maths Project](https://codeinstitute.net "Love Maths Project")
+    - [W3C Schools](https://www.w3schools.com/ "W3C Schools")
+    - [Project Portfolio-2 channel on Slack](https://slack.com/intl/en-ie/ "Slack")
+
+- Quiz Questions:
+    - 
+
+- YouTube Channels for Quiz functionality and fetching:
+    - [James Q Quick](https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx "YouTube Channel")
+
+- Visual content:
+    - [Coolors](https://coolors.co/ "Coolors")
+
+- Loader Code:
+    - [How To Create a Loader](https://www.w3schools.com/howto/howto_css_loader.asp "w3schools")

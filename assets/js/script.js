@@ -1,18 +1,21 @@
+
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
+const loader = document.getElementById('loader');
+const game = document.getElementById('game');
 
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
-let availableQuesions = [];
+let availableQuestions = [];
 
 let questions = [];
 
-fetch("questions.json")
+fetch("assets/data/questions.json")
     .then((res) => {
         return res.json();
     })
@@ -20,8 +23,9 @@ fetch("questions.json")
         questions = loadedQuestions;
         startGame();
     })
+
     .catch((err) => {
-        console.error(err);
+        console.error("Failed to load questions:", err);
     });
 
 //constants
@@ -29,10 +33,12 @@ const CORRECT_POINTS = 10;
 const MAX_QUESTIONS = 10;
 
 startGame = () => {
-  questionCounter = 0;
-  score = 0;
-  availableQuesions = [...questions];
-  getNewQuestion();
+    questionCounter = 0;
+    score = 0;
+    availableQuesions = [...questions];
+    getNewQuestion();
+    game.classList.remove("hidden");
+    loader.classList.add("hidden");
 };
 
 getNewQuestion = () => {
@@ -65,7 +71,7 @@ choices.forEach(choice => {
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset["number"];
 
-    const classToApply = 'incorrect';
+    let classToApply = 'incorrect';
     if (selectedAnswer == currentQuestion.answer) {
         classToApply = 'correct';
     }
@@ -91,5 +97,3 @@ const finalScore = document.getElementById('finalScore');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
 const MAX_HIGH_SCORES = 100;
 finalScore.innerText = mostRecentScore;
-
-startGame();
