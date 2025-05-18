@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the name of Harry Potter's owl?",
+    "options": ["Hedwig", "Crookshanks", "Scabbers", "Fawkes"],
+    "answer": "Hedwig"
+  },
+  {
+    "question": "What house is Harry Potter sorted into?",
+    "options": ["Slytherin", "Ravenclaw", "Gryffindor", "Hufflepuff"],
+    "answer": "Gryffindor"
+  },
+  {
+    "question": "What position does Harry play on his Quidditch team?",
+    "options": ["Chaser", "Keeper", "Beater", "Seeker"],
+    "answer": "Seeker"
+  },
+  {
+    "question": "What is the name of the Weasley's house?",
+    "options": ["The Burrow", "Grimmauld Place", "Shell Cottage", "Hogsmeade"],
+    "answer": "The Burrow"
+  },
+  {
+    "question": "What spell is used to disarm an opponent?",
+    "options": ["Expelliarmus", "Avada Kedavra", "Lumos", "Alohomora"],
+    "answer": "Expelliarmus"
+  },
+  {
+    "question": "Who is the Half-Blood Prince?",
+    "options": ["Sirius Black", "Draco Malfoy", "Severus Snape", "Albus Dumbledore"],
+    "answer": "Severus Snape"
+  },
+  {
+    "question": "What creature is Aragog?",
+    "options": ["Basilisk", "Hippogriff", "Acromantula", "Thestral"],
+    "answer": "Acromantula"
+  },
+  {
+    "question": "What is Voldemort's real name?",
+    "options": ["Tom Riddle", "Lucius Malfoy", "Percival Dumbledore", "Regulus Black"],
+    "answer": "Tom Riddle"
+  },
+  {
+    "question": "Who teaches Potions in Harry’s sixth year?",
+    "options": ["Slughorn", "Snape", "McGonagall", "Moody"],
+    "answer": "Slughorn"
+  },
+  {
+    "question": "What platform does the Hogwarts Express leave from?",
+    "options": ["9", "10", "9 ¾", "10 ½"],
+    "answer": "9 ¾"
+  }
+];
