@@ -1,89 +1,95 @@
-let currentQuestionIndex = 0;
+const question = document.getElementById("question");
+const choices = Array.from(document.getElementsByClassName("choice-text"));
+const progressText = document.getElementById("progressText");
+const scoreText = document.getElementById("score");
+const progressBarFull = document.getElementById("progressBarFull");
+
+let currentQuestion = {};
+let acceptingAnswers = false;
 let score = 0;
+let questionCounter = 0;
+let availableQuesions = [];
+
 let questions = [];
 
-const startScreen = document.getElementById('start-screen');
-const quizContainer = document.getElementById('quiz-container');
-const questionContainer = document.getElementById('question-container');
-const scoreDisplay = document.getElementById('score-value');
-const progressDisplay = document.getElementById('current');
-const totalDisplay = document.getElementById('total');
-const resultScreen = document.getElementById('result-screen');
-const finalScore = document.getElementById('final-score');
-
-document.getElementById('start-button').addEventListener('click', () => {
-  startScreen.classList.add('hidden');
-  quizContainer.classList.remove('hidden');
-  fetchQuestions();
-});
-
-document.getElementById('restart-button').addEventListener('click', () => {
-  resultScreen.classList.add('hidden');
-  startScreen.classList.remove('hidden');
-  currentQuestionIndex = 0;
-  score = 0;
-});
-
-function fetchQuestions() {
-  fetch('assets/data/questions.json') 
-    .then(response => response.json())
-    .then(data => {
-      questions = shuffleArray(data);
-      totalDisplay.textContent = questions.length;
-      startQuiz();
+fetch("questions.json")
+    .then((res) => {
+        return res.json();
     })
-    .catch(error => console.error('Failed to load questions:', error));
-}
-
-function startQuiz() {
-  showQuestion();
-}
-
-function showQuestion() {
-  const questionObj = questions[currentQuestionIndex];
-  questionContainer.innerHTML = '';
-  questionContainer.classList.add('fade-in');
-
-  const questionEl = document.createElement('h2');
-  questionEl.textContent = questionObj.question;
-  questionContainer.appendChild(questionEl);
-
-  const shuffledOptions = shuffleArray([...questionObj.options]);
-
-  shuffledOptions.forEach(option => {
-    const btn = document.createElement('button');
-    btn.textContent = option;
-    btn.classList.add('option-button');
-    btn.addEventListener('click', () => {
-      if (option === questionObj.answer) {
-        score++;
-        scoreDisplay.textContent = score;
-      }
-
-      currentQuestionIndex++;
-      progressDisplay.textContent = currentQuestionIndex + 1;
-
-      if (currentQuestionIndex < questions.length) {
-        showQuestion();
-      } else {
-        endQuiz();
-      }
+    .then((loadedQuestions) => {
+        questions = loadedQuestions;
+        startGame();
+    })
+    .catch((err) => {
+        console.error(err);
     });
-    questionContainer.appendChild(btn);
-  });
-}
 
-function endQuiz() {
-  quizContainer.classList.add('hidden');
-  resultScreen.classList.remove('hidden');
-  finalScore.textContent = `You scored ${score} out of ${questions.length}!`;
-}
+//constants
+const CORRECT_POINTS = 10;
+const MAX_QUESTIONS = 10;
 
-// Shuffle function
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+startGame = () => {
+  questionCounter = 0;
+  score = 0;
+  availableQuesions = [...questions];
+  getNewQuestion();
+};
+
+getNewQuestion = () => {
+  if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+    localStorage.setItem("mostRecentScore", score);
+    return window.location.assign("../end-game.html");
   }
-  return array;
-}
+  questionCounter++;
+  progressText.innerText = questionCounter + "/" + MAX_QUESTIONS;
+  progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
+
+  const questionIndex = Math.floor(Math.random() * availableQuesions.length);
+  currentQuestion = availableQuesions[questionIndex];
+  question.innerText = currentQuestion.question;
+
+  choices.forEach(choice => {
+    const number = choice.dataset["number"];
+    choice.innerText = currentQuestion["choice" + number];
+  });
+
+  availableQuesions.splice(questionIndex, 1);
+  acceptingAnswers = true;
+};
+
+choices.forEach(choice => {
+  choice.addEventListener("click", e => {
+    if (!acceptingAnswers) return;
+
+    acceptingAnswers = false;
+    const selectedChoice = e.target;
+    const selectedAnswer = selectedChoice.dataset["number"];
+
+    const classToApply = 'incorrect';
+    if (selectedAnswer == currentQuestion.answer) {
+        classToApply = 'correct';
+    }
+    if (classToApply === "correct") {
+      incrementScore(CORRECT_POINTS);
+    }
+
+    selectedChoice.parentElement.classList.add(classToApply);
+
+    setTimeout(() => {
+      selectedChoice.parentElement.classList.remove(classToApply);
+      getNewQuestion();
+    }, 1000);
+  });
+});
+
+incrementScore = num => {
+  score += num;
+  scoreText.innerText = score;
+};
+
+const finalScore = document.getElementById('finalScore');
+const mostRecentScore = localStorage.getItem('mostRecentScore');
+const MAX_HIGH_SCORES = 100;
+finalScore.innerText = mostRecentScore;
+
+startGame();

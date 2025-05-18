@@ -112,11 +112,11 @@ Colour scheme was chosen based on the palette of energetic “sunrise” and “
 [Contrast Grid](/docs/colours-runners-club.png)
 | CSS Name                 | HEX       | Comment                       |
 | ------------------------ | --------- | ----------------------------- |
-|     --title-colour       | #FFBA08 | Body text                     |
-|     --heading-colour     | #F42B03 | Buttons, links, highlights    |
+|     --title-colour       | #D3AF37 | Title text                    |
+|     --heading-colour     | #F42B03 | Questions and  sub-headings   |
 |     --bg-dark            | #080357 | Page background               |
-|     --score-colour       | #29524A | Hover states                  |
-|     --text-colour        | #FFFFFF | Secondary text                |
+|     --text-colour        | #29524A | Quiz text                     |
+|     --quiz-colour        | #FFFFFF | Quiz section                  |
 
 ## Images
 Images and background images were sourced from getty images and from Unsplash. 

@@ -1,52 +1,82 @@
 [
   {
     "question": "What is the name of Harry Potter's owl?",
-    "options": ["Hedwig", "Crookshanks", "Scabbers", "Fawkes"],
-    "answer": "Hedwig"
+    "choice1": "Hedwig",
+    "choice2": "Crookshanks",
+    "choice3": "Scabbers",
+    "choice4": "Fawkes",
+    "answer": 1
   },
   {
     "question": "What house is Harry Potter sorted into?",
-    "options": ["Slytherin", "Ravenclaw", "Gryffindor", "Hufflepuff"],
-    "answer": "Gryffindor"
+    "choice1": "Slytherin",
+    "choice2": "Ravenclaw",
+    "choice3": "Gryffindor",
+    "choice4": "Hufflepuff",
+    "answer": 3
   },
   {
     "question": "What position does Harry play on his Quidditch team?",
-    "options": ["Chaser", "Keeper", "Beater", "Seeker"],
-    "answer": "Seeker"
+    "choice1": "Chaser",
+    "choice2": "Keeper",
+    "choice3": "Beater",
+    "choice4": "Seeker",
+    "answer": 4
   },
   {
     "question": "What is the name of the Weasley's house?",
-    "options": ["The Burrow", "Grimmauld Place", "Shell Cottage", "Hogsmeade"],
-    "answer": "The Burrow"
+    "choice1": "The Burrow",
+    "choice2": "Grimmauld Place",
+    "choice3": "Shell Cottage",
+    "choice4": "Hogsmeade",
+    "answer": 1
   },
   {
     "question": "What spell is used to disarm an opponent?",
-    "options": ["Expelliarmus", "Avada Kedavra", "Lumos", "Alohomora"],
-    "answer": "Expelliarmus"
+    "choice1": "Expelliarmus",
+    "choice2": "Avada Kedavra",
+    "choice3": "Lumos",
+    "choice4": "Alohomora",
+    "answer": 1
   },
   {
     "question": "Who is the Half-Blood Prince?",
-    "options": ["Sirius Black", "Draco Malfoy", "Severus Snape", "Albus Dumbledore"],
-    "answer": "Severus Snape"
+    "choice1": "Sirius Black",
+    "choice2": "Draco Malfoy",
+    "choice3": "Severus Snape",
+    "choice4": "Albus Dumbledore",
+    "answer": 3
   },
   {
     "question": "What creature is Aragog?",
-    "options": ["Basilisk", "Hippogriff", "Acromantula", "Thestral"],
-    "answer": "Acromantula"
+    "choice1": "Basilisk",
+    "choice2": "Hippogriff",
+    "choice3": "Acromantula",
+    "choice4": "Thestral",
+    "answer": 3
   },
   {
     "question": "What is Voldemort's real name?",
-    "options": ["Tom Riddle", "Lucius Malfoy", "Percival Dumbledore", "Regulus Black"],
-    "answer": "Tom Riddle"
+    "choice1": "Tom Riddle",
+    "choice2": "Lucius Malfoy",
+    "choice3": "Percival Dumbledore",
+    "choice4": "Regulus Black",
+    "answer": 1
   },
   {
     "question": "Who teaches Potions in Harry’s sixth year?",
-    "options": ["Slughorn", "Snape", "McGonagall", "Moody"],
-    "answer": "Slughorn"
+    "choice1": "Slughorn",
+    "choice2": "Snape",
+    "choice3": "McGonagall",
+    "choice4": "Moody",
+    "answer": 1
   },
   {
     "question": "What platform does the Hogwarts Express leave from?",
-    "options": ["9", "10", "9 ¾", "10 ½"],
-    "answer": "9 ¾"
+    "choice1": "9",
+    "choice2": "10",
+    "choice3": "9 ¾",
+    "choice4": "10 ½",
+    "answer": 3
   }
-];
+]
