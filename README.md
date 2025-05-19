@@ -52,12 +52,12 @@ Harry Potter Facts Quiz is a magical, browser-based trivia game that invites fan
 ---
 
 ## User Stories
-* As a Harry Potter fan, I want to test my knowledge with a fun quiz, so I can challenge myself on wizarding facts.
-* As a first-time visitor, I want an intuitive, responsive layout, so I can take the quiz easily on any device.
-* As a trivia lover, I want randomized questions each time, so I can enjoy replayability.
-* As a player, I want to see my score update live and track how far I am through the quiz.
-* As someone who got a low score, I want to quickly restart the quiz, so I can try again and improve.
-* As a casual user, I want fast load times and simple controls, so I’m not frustrated by delays or confusion.
+* As a user who is a Harry Potter fan, I want to test my knowledge with a fun quiz, so I can challenge myself on wizarding facts.
+* As a user who is a first-time visitor, I want an intuitive, responsive layout, so I can take the quiz easily on any device.
+* As a user who is a trivia lover, I want randomized questions each time, so I can enjoy replayability.
+* As a user who is a player, I want to see my score update live and track how far I am through the quiz.
+* As a user who got a low score, I want to quickly restart the quiz, so I can try again and improve.
+* As a user, I want fast load times and simple controls, so I’m not frustrated by delays or confusion.
 * As a visually-minded user, I want smooth transitions and animations, so the quiz feels polished and fun.
 * As an accessibility-minded user, I want high contrast, clear buttons, and readable fonts, so I can participate easily.
 
@@ -209,6 +209,9 @@ The webpage was thoroughly tested. 3 bugs are still unresolved and require furth
 
 | Bug | Status | Description   | Steps To Resolve |
 | -------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Questions are not loading when starting the quiz. | Resolved | When pressing start on the quiz, the questions from my .json file would not load, and instead my placeholder would only appear. | I tried first posting the questions back into my script.js file to see if I may have made the .json file wrong. Then I used ... to step through my code line by line to see where my code stop running. There I discovered I had mispelled the word "question", which happened a few more times after. |
+| VS code stopped running. | Resolved | When run the VS code stopped answering or moving. | I figured out that I had accidentally made an infinite loop. |
+| 
 
 
 [Back to top](#contents)

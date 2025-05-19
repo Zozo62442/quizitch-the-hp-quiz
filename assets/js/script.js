@@ -1,4 +1,3 @@
-
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
@@ -6,6 +5,11 @@ const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById('loader');
 const game = document.getElementById('game');
+const CORRECT_POINTS = 10;
+const MAX_QUESTIONS = 10;
+const finalScore = document.getElementById('finalScore');
+const mostRecentScore = localStorage.getItem('mostRecentScore');
+const MAX_HIGH_SCORES = 100;
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -28,11 +32,7 @@ fetch("assets/data/questions.json")
         console.error("Failed to load questions:", err);
     });
 
-//constants
-const CORRECT_POINTS = 10;
-const MAX_QUESTIONS = 10;
-
-startGame = () => {
+const startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuesions = [...questions];
@@ -41,13 +41,13 @@ startGame = () => {
     loader.classList.add("hidden");
 };
 
-getNewQuestion = () => {
+const getNewQuestion = () => {
   if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     localStorage.setItem("mostRecentScore", score);
     return window.location.assign("../end-game.html");
   }
   questionCounter++;
-  progressText.innerText = questionCounter + "/" + MAX_QUESTIONS;
+  progressText.innerHTML = questionCounter + "/" + MAX_QUESTIONS;
   progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
   const questionIndex = Math.floor(Math.random() * availableQuesions.length);
@@ -93,7 +93,4 @@ incrementScore = num => {
   scoreText.innerText = score;
 };
 
-const finalScore = document.getElementById('finalScore');
-const mostRecentScore = localStorage.getItem('mostRecentScore');
-const MAX_HIGH_SCORES = 100;
 finalScore.innerText = mostRecentScore;
