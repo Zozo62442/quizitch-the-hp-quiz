@@ -240,15 +240,11 @@ Final Test Results:
 
 ### HTML
 
-I validated and tested ... html files [W3C HTML Validation Service](... "W3C HTML"), which came back ... errors.
+I validated and tested all html files [W3C HTML Validation Service](... "W3C HTML"), which came back with no errors.
 
 * Main Quizitch Page:
 
-![W3C HTML Validator](... "W3C HTML Validator index.html")
-
-* Question Page:
-
-![W3C HTML Validator](... "W3C HTML Validator feedback-thanks.html")
+![W3C HTML Validator](docs/html-validator.png "W3C HTML Validator index.html")
 
 
 [Back to top](#contents)
@@ -257,17 +253,14 @@ I validated and tested ... html files [W3C HTML Validation Service](... "W3C HTM
 
 
 
-![W3C CSS Validator](... "W3C CSS Validator results")
-
-
-[Back to top](#contents)
+![W3C CSS Validator](docs/css-validator.png "W3C CSS Validator results")
 
 
 ## Accessibility Testing
 
 
 
-![WAVE](... "WAVE Result")
+![WAVE](docs/wave-results.png "WAVE Result")
 
 [Back to top](#contents)
 
