@@ -1,7 +1,7 @@
 # Quizitch - The Harry Potter Quiz
 Harry Potter Facts Quiz is a magical, browser-based trivia game that invites fans to test their knowledge of the wizarding world—from Hogwarts houses to enchanted creatures. Designed with simplicity and immersion in mind, the quiz opens with a clear call to action and lets users begin at their own pace. As players progress through ten randomized questions, their score and progress are tracked in real time, all wrapped in smooth animations and intuitive navigation. Built with HTML, CSS, and JavaScript, this responsive project fetches its data from an external JSON file, demonstrating clean separation of content and logic. Whether you’re a Muggle or a seasoned witch or wizard, the Harry Potter Facts Quiz is an enchanting way to relive the magic—one question at a time.
 
-![quizitch](/docs/footloose-running-club.png)
+![quizitch](/docs/quizitch-the-hp-quiz.png)
 
 [Contents](#contents)
   * [User Goals](#user-goals)
@@ -109,7 +109,7 @@ I chose the above fonts, as they are meant to be easy to read and also have a se
 ### Colour Scheme 
 Colour scheme was chosen based on the palette of energetic “sunrise” and “track” hues to evoke motion and community fitting running. Additionally the colours have been tested to have enough contrast for users with different types of colour blindness:
 
-[Contrast Grid](/docs/colours-runners-club.png)
+[Contrast Grid](/docs/quizitch-colour-palette.png)
 | CSS Name                 | HEX       | Comment                       |
 | ------------------------ | --------- | ----------------------------- |
 |     --title-colour       | #D3AF37 | Title text                    |
@@ -224,7 +224,14 @@ Final Test Results:
 
 | Size | Device Example     | Navigation | Element Alignments | Content Placement | Functionality | 
 | ---- | ------------------ | ---------- | ------------------ | ----------------- | ------------- | 
-
+| sm   | Samsung Galaxy S5/S6/S7 | Good  | Good               | Good              | Good          | 
+| sm   | Google Pixel       | Good       | Good               | Good              | Good          | 
+| sm   | iPhone 13 PRO MAX  | Good       | Good               | Good              | Good          |  
+| md   | iPad MINI          | Good       | Good               | Good              | Good          | 
+| md   | iPad Samsung Galaxy Tab 10 | Good | Good             | Good              | Good          | 
+| lg   | iPad Pro           | Good       | Good               | Good              | Good          | 
+| xl   | 10" Desktop        | Good       | Good               | Good              | Good          |     
+| xxl  | 24" Desktop        | Good       | Good               | Good              | Good          | 
 
 [Back to top](#contents)
 

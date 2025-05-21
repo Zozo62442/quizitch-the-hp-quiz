@@ -50,6 +50,11 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.choice-container {
+  border-radius: 10px;
+    align-self: center;
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -254,6 +259,7 @@ body {
 
   .choice-container {
     flex-direction: row;
+    max-width: 80%;
   }
 
   #start-button {
