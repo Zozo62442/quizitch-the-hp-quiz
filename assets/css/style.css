@@ -72,6 +72,12 @@ body {
   display: none;
 }
 
+/* Start page */
+#introduction {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
+
 /* Game view */
 #question {
     font-family: var(--secondary-font);
