@@ -169,10 +169,10 @@ Images and background images were sourced from getty images and from Unsplash.
 * **Difficulty Levels**: Offer Easy, Medium, and Hard modes with filtered questions.
 * **Sound Effects & Music**: Add subtle magical sounds for answer clicks or transitions.
 * **Image-Based Questions**: Include questions with character or scene images.
-* **Accessibility Enhancements**: Add ARIA labels and keyboard navigation for improved screen reader support.
 * **Multilingual Support**: Translate the quiz into other languages for broader access.
 * **Shareable Results**: Create social sharing buttons to post scores on platforms like Twitter or Facebook.
 * **Dark Mode Toggle**: Allow users to switch between light and dark UI themes.
+
 # Technologies Used
 
 ## Languages
@@ -251,14 +251,34 @@ I validated and tested all html files [W3C HTML Validation Service](... "W3C HTM
 
 ### CSS
 
-
-
 ![W3C CSS Validator](docs/css-validator.png "W3C CSS Validator results")
 
+### JavaScript
+
+JS code was validated on [JSHint](https://jshint.com/ "JSHint"). No errors identified.
+
+![JS Validation Image](docs/js-test-result.png)
+
+[Back to top](#contents)
+
+
+## User Story Testing
+
+| User Story                                                      | Result                                                     | Pass |Screenshot                                    |
+| ------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------- | -------------------------------------------------------------------------- |
+| As a user who is a Harry Potter fan, I want to test my knowledge with a fun quiz, so I can challenge myself on wizarding facts. | Quiz presents 10 Harry Potter–related questions.                           | Yes      | ![Question View](docs/user-story1.png "Question View")                     |
+| As a user who is a first-time visitor, I want an intuitive, responsive layout, so I can take the quiz easily on any device.     | Quiz is fully responsive across all screen sizes.                          | Yes      | ![Level View](docs/quizitch-the-hp-quiz.png "Level View")                           |
+| As a user who is a trivia lover, I want randomized questions each time, so I can enjoy replayability.                           | Questions are randomly selected each session.                              | Yes      | ![Question Answers](docs/user-story1.png "Question Answers")               |
+| As a user who is a player, I want to see my score update live and track how far I am through the quiz.                          | Displays progress bar and live score counter.                              | Yes      | ![Score and Progress View](docs/user-story4.png "Score and Progress View") |
+| As a user who got a low score, I want to quickly restart the quiz, so I can try again and improve.                              | Restart button available; intuitive controls.                              | Yes      | ![Start View](docs/user-story5.png "Start View")                           |
+| As a user, I want fast load times and simple controls, so I’m not frustrated by delays or confusion.                            | Quick load speed and responsive UI; minimal delay between actions.         | Yes      | ![Score View](docs/user-story6.png "Score View")                           |
+| As a user, I want to experience a fun, Hogwarts-themed interface.                                                               | Themed fonts, colors, and visual references to Harry Potter.               | Yes      | ![Themed UI](docs/user-story6.png "Themed UI")                             |
+| As an accessibility-minded user, I want high contrast, clear buttons, and readable fonts, so I can participate easily.          | Readable fonts, visible contrast, and accessible controls.                 | Yes      | ![Feedback Form](docs/user-story1.png "Feedback Form")                     |
+| As a user, I want to receive feedback on the correctness of my answers immediately.                                             | Correct answers highlight in green, incorrect in red for instant feedback. | Yes      | ![Feedback](docs/user-story9.png "Feedback")                               |
+
+[Back to top](#contents)
 
 ## Accessibility Testing
-
-
 
 ![WAVE](docs/wave-results.png "WAVE Result")
 
@@ -267,13 +287,28 @@ I validated and tested all html files [W3C HTML Validation Service](... "W3C HTM
 
 ## Lighthouse Testing
 
+The Harry Potter Quiz has been evaluated using the Lighthouse tool within Chrome DevTools. Lighthouse provides scores based on several key website quality metrics:
 
+  * Performance – Measures how fast the site loads and becomes interactive for users.
+
+  * Accessibility – Assesses how usable the site is for individuals relying on assistive technologies.
+
+  * Best Practices – Verifies whether the site adheres to current web development standards.
+
+  * SEO – Evaluates how well the site is optimized for visibility in search engine results.
+
+Desktop Lighthouse Test Results (Chrome):
+![Lighthouse-Desktop-Chrome-Index](docs/lighthouse-desktop-chrome-index.png "Lighthouse-Desktop-Chrome-Index")
+
+Mobile Lighthouse Test Results (Chrome):
+![Lighthouse-Mobile-Chrome-Index](docs/lighthouse-mobile-chrome-index.png "Lighthouse-Mobile-Chrome-Index")
 
 [Back to top](#contents)
 
 
 ## Browser Testing
 
+For browser testing I used Firefox, Google Chrome, Safari and Microsoft Edge to test for bugs and possible malfunctions. On the iPhone and iPad I tested both Safari and Firefox. The desktop versions were tested on Google Chrome, Firefox and Microsoft Edge. No significant problems were detected for either browsers or display types. 
 
 
 [Back to top](#contents)
@@ -305,15 +340,11 @@ _Any changes needed to the website can be made, committed, and pushed to GitHub.
 
     - [Simen Daehlin](https://github.com/Eventyret "Simen Daehlin") # quizitch-the-hp-quiz
 
-
 - Code inspiration and learning content:
 
     - [Love Maths Project](https://codeinstitute.net "Love Maths Project")
     - [W3C Schools](https://www.w3schools.com/ "W3C Schools")
     - [Project Portfolio-2 channel on Slack](https://slack.com/intl/en-ie/ "Slack")
-
-- Quiz Questions:
-    - 
 
 - YouTube Channels for Quiz functionality and fetching:
     - [James Q Quick](https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx "YouTube Channel")
