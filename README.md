@@ -338,7 +338,7 @@ _Any changes needed to the website can be made, committed, and pushed to GitHub.
 
 - Insightful feedback, advice and support:
 
-    - [Simen Daehlin](https://github.com/Eventyret "Simen Daehlin") # quizitch-the-hp-quiz
+    - [Simen Daehlin](https://github.com/Eventyret "Simen Daehlin")
 
 - Code inspiration and learning content:
 
@@ -348,9 +348,15 @@ _Any changes needed to the website can be made, committed, and pushed to GitHub.
 
 - YouTube Channels for Quiz functionality and fetching:
     - [James Q Quick](https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx "YouTube Channel")
+    - [Web Develipment Simplified](https://www.youtube.com/watch?v=iiADhChRriM&list=WL&index=7&t=1s "YouTube Channel")
 
 - Visual content:
     - [Coolors](https://coolors.co/ "Coolors")
+
+- Background Animation
+    - [w3schools](https://www.w3schools.com/howto/howto_css_fullscreen_video.asp "w3schools")
+    - [Daweb Schools](https://www.youtube.com/watch?v=g-bQe-gZwJ4 "Youtube Channel")
+    - [gaeddongi](https://sora.chatgpt.com/g/gen_01jm481rhzf38a12cgyb1qvcfs "Animator of Background")
 
 - Loader Code:
     - [How To Create a Loader](https://www.w3schools.com/howto/howto_css_loader.asp "w3schools")

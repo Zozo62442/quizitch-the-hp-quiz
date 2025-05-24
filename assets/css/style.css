@@ -41,6 +41,17 @@ body {
   padding: 2rem;
 }
 
+#myVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+  opacity: 0.6; 
+}
+
 .container {
   max-width: 80rem;
   margin: auto;
@@ -48,6 +59,8 @@ body {
   padding: 2rem 2rem;
   border-radius: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  position: relative;
 }
 
 .choice-container {
