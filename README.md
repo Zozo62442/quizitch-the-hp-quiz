@@ -298,10 +298,10 @@ The Harry Potter Quiz has been evaluated using the Lighthouse tool within Chrome
   * SEO – Evaluates how well the site is optimized for visibility in search engine results.
 
 Desktop Lighthouse Test Results (Chrome):
-![Lighthouse-Desktop-Chrome-Index](docs/lighthouse-desktop-chrome-index.png "Lighthouse-Desktop-Chrome-Index")
+[Lighthouse-Desktop-Chrome-Index](docs/lighthouse-desktop-chrome-index.png "Lighthouse-Desktop-Chrome-Index")
 
 Mobile Lighthouse Test Results (Chrome):
-![Lighthouse-Mobile-Chrome-Index](docs/lighthouse-mobile-chrome-index.png "Lighthouse-Mobile-Chrome-Index")
+[Lighthouse-Mobile-Chrome-Index](docs/lighthouse-mobile-chrome-index.png "Lighthouse-Mobile-Chrome-Index")
 
 [Back to top](#contents)
 
@@ -327,7 +327,7 @@ The Running-club website was deployed on GitHub pages using the steps below:
 
 - Click the **Save** button.
 
-- The website is now available at https://zozo62442.github.io/running-club/.
+- The website is now available at https://zozo62442.github.io/quizitch-the-hp-quiz/.
 
 _Any changes needed to the website can be made, committed, and pushed to GitHub._
 
