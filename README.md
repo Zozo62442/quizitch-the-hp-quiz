@@ -82,17 +82,9 @@ Harry Potter Facts Quiz is a magical, browser-based trivia game that invites fan
 [Back to top](#contents)
 
 ## Wireframes
-### Mobile-first sketches created in Balsamiq:
-* Hero + reasons stacked
-* Marathon cards in single column
-* Contact info
-
-### Tablet & Desktop:
-* Hero full-width carousel
-* Reasons as three-column grid
-* Marathon cards in two- or three-column grid
-* Contact bottom
-* Success page address and map side-by-side
+Wireframes were created using Canva, following a mobile-first design approach before scaling up to tablet and desktop layouts. The initial wireframes laid out the core structure and user flow of the quiz, ensuring a clean, intuitive experience across all devices.
+There are some deviations from the original wireframes in the final live version of the quiz. Notably, a magical animated video background was added to bring the Harry Potter theme to life, along with several stylistic enhancements such as themed colors, fonts, and design accents inspired by the wizarding world.
+Additionally, the question counter was transformed from simple text into a progress bar, offering a more visual representation of quiz progression. These updates were made to enhance engagement, improve usability, and align better with the overall theme and feel of the quiz.
 
 [Mobile Wireframes](/docs/wireframe-mobile.png "Mobile Wireframes")
 
@@ -191,7 +183,8 @@ Images and background images were sourced from getty images and from Unsplash.
 
 * [GitHub](https://github.com/ "GitHub")
 * [GitPod](https://www.gitpod.io/#get-started "GitPod")
-* [Balsamiq](https://balsamiq.com/wireframes/ "Balsamiq")
+* [Canva](https://www.canva.com/ "Canva")
+* [JSHint](https://jshint.com/ "JSHint")
 * [W3C HTML Validation Service](https://validator.w3.org/ "W3C HTML")
 * [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/ "W3C CSS")
 * [Am I Responsive](https://ui.dev/amiresponsive "Am I responsive")
