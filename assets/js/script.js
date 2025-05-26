@@ -1,5 +1,5 @@
 const questionRef = document.querySelector("#question");
-const choices = Array.from(document.querySelectorAll("choice-text"));
+const choices = Array.from(document.querySelectorAll(".choice-text"));
 const progressText = document.querySelector("#progressText");
 const scoreText = document.querySelector("#score");
 const progressBarFull = document.querySelector("#progressBarFull");
@@ -57,7 +57,7 @@ const getNewQuestion = () => {
 
   choices.forEach(choice => {
     const number = choice.dataset.number;
-    choice.innerText = currentQuestion["choice" + number];
+    choice.innerHTML = currentQuestion["choice" + number];
   });
 
   availableQuesions.splice(questionIndex, 1);
