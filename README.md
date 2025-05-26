@@ -204,7 +204,7 @@ The webpage was thoroughly tested. 3 bugs are still unresolved and require furth
 | -------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Questions are not loading when starting the quiz. | Resolved | When pressing start on the quiz, the questions from my .json file would not load, and instead my placeholder text and questions would only appear. | I tried first posting the questions back into my script.js file to see if I may have made the .json file wrong. Then I used ... to step through my code line by line to see where my code stop running. There I discovered I had mispelled the word "question", which happened a few more times after. |
 | VS code stopped running. | Resolved | When run the VS code stopped answering or moving. | I figured out that I had accidentally made an infinite loop. |
-
+| Background video plays full screen on iPhone.| Unresolved | With each new question, the background video pops-up to full screen on iOS mobile phones. | ... |
 
 
 [Back to top](#contents)

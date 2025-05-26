@@ -1,38 +1,38 @@
-const question = document.getElementById("question");
+const questionRef = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById('loader');
 const game = document.getElementById('game');
-const CORRECT_POINTS = 10;
-const MAX_QUESTIONS = 10;
 const finalScore = document.getElementById('finalScore');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
+
 const MAX_HIGH_SCORES = 100;
+const MAX_QUESTIONS = 10;
+const CORRECT_POINTS = 10;
 
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
-
 let questions = [];
 
-fetch("assets/data/questions.json")
-    .then((res) => {
-        return res.json();
-    })
+
+const getMeMyQuestions => {
+  fetch("assets/data/questions.json")
+    .then((res) => return res.json())
     .then((loadedQuestions) => {
         questions = loadedQuestions;
         startGame();
     })
 
-    .catch((err) => {
-        console.error("Failed to load questions:", err);
-    });
+    .catch((err) => console.error("Failed to load questions:", err));
+ }
 
 const startGame = () => {
+  getMeMyQuestions()
     questionCounter = 0;
     score = 0;
     availableQuesions = [...questions];
@@ -40,6 +40,7 @@ const startGame = () => {
     game.classList.remove("hidden");
     loader.classList.add("hidden");
 };
+
 
 const getNewQuestion = () => {
   if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
@@ -52,7 +53,7 @@ const getNewQuestion = () => {
 
   const questionIndex = Math.floor(Math.random() * availableQuesions.length);
   currentQuestion = availableQuesions[questionIndex];
-  question.innerText = currentQuestion.question;
+  questionRef.innerHTML = currentQuestion.question;
 
   choices.forEach(choice => {
     const number = choice.dataset.number;
@@ -90,7 +91,7 @@ choices.forEach(choice => {
 
 incrementScore = num => {
   score += num;
-  scoreText.innerText = score;
+  scoreText.innerHTML = score;
 };
 
-finalScore.innerText = mostRecentScore;
+finalScore.innerHTML = mostRecentScore;
