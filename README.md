@@ -87,8 +87,8 @@ There are some deviations from the original wireframes in the final live version
 Additionally, the question counter was transformed from simple text into a progress bar, offering a more visual representation of quiz progression. These updates were made to enhance engagement, improve usability, and align better with the overall theme and feel of the quiz.
 
 [Mobile Wireframes](/docs/wireframe-mobile.png "Mobile Wireframes")
-
-[Desktop Wireframes](/docs/wireframe-desktop.png "Mobile Wireframes")
+[Tabelt Wireframes](/docs/wireframe-tablet.png "Tablet Wireframes")
+[Desktop Wireframes](/docs/wireframe-desktop.png "Desktop Wireframes")
 
 ## Design Choices
 
@@ -182,7 +182,6 @@ Images and background images were sourced from getty images and from Unsplash.
 ## Tools
 
 * [GitHub](https://github.com/ "GitHub")
-* [GitPod](https://www.gitpod.io/#get-started "GitPod")
 * [Canva](https://www.canva.com/ "Canva")
 * [JSHint](https://jshint.com/ "JSHint")
 * [W3C HTML Validation Service](https://validator.w3.org/ "W3C HTML")
