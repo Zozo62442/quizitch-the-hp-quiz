@@ -350,5 +350,12 @@ _Any changes needed to the website can be made, committed, and pushed to GitHub.
     - [Daweb Schools](https://www.youtube.com/watch?v=g-bQe-gZwJ4 "Youtube Channel")
     - [gaeddongi](https://sora.chatgpt.com/g/gen_01jm481rhzf38a12cgyb1qvcfs "Animator of Background")
 
+- Text shimmer or glow effect
+    - [Codeguage](https://www.codeguage.com/blog/shimmer-effect-html-css "Shimmer Effect Resource")
+    - [W3C Schools](https://www.w3schools.com/css/css3_shadows.asp "W3C Schools")
+
+- Pulse effect
+    - [Travis Media](https://travis.media/blog/css-pulse-effect/ "Travis Media Blog") 
+
 - Loader Code:
     - [How To Create a Loader](https://www.w3schools.com/howto/howto_css_loader.asp "w3schools")

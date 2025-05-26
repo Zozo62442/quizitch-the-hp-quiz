@@ -105,19 +105,22 @@ body {
 
 /* Buttons */
 .button {
+  background-color: #6a5acd;
+  color: white;
+  font-size: 1.2rem;
   padding: 1rem 2rem;
   margin: 1rem;
-  font-size: 1rem;
-  border: none;
   border-radius: 0.5rem;
-  background-color: #6a5acd;
-  color: #FFFFFF;
+  border: none;
+  transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
-  transition: background-color 0.3s;
+  text-decoration: none;
 }
 
 .button:hover {
-  background-color: #080357;
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #D3AF37, 0 0 20px #c403f4;
+  background-color: #c403f4;
 }
 
 /* Score and Progress */
@@ -240,9 +243,69 @@ body {
 }
 
 /* End Game */
-.score-end h2 {
-  color: var(--button-colour);
+h2.score-end,
+h2.score-end i {
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, #D3AF37, #6a5acd, #F42B03);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s infinite linear;
+  text-shadow: 0 0 10px #d3af3780;
 }
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+#end {
+  padding: 4rem;
+  text-align: center;
+  color: #D3AF37;
+}
+
+#finalScore {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  animation: glowPulse 1.5s ease-in-out infinite;
+  text-shadow: 0 0 10px #D3AF37, 0 0 20px #f4e403, 0 0 30px #f4e403;
+}
+
+.score-end p {
+  font-size: 1.6rem;
+  color: #f4e403;
+  font-style: italic;
+  margin-bottom: 3rem;
+  animation: flicker 3s infinite;
+}
+
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 10px #D3AF37;
+  }
+  50% {
+    text-shadow: 0 0 20px #f4b003;
+  }
+  100% {
+    text-shadow: 0 0 10px #D3AF37;
+  }
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
 
 /* Media queries */
 
