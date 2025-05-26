@@ -32,7 +32,6 @@ const getMeMyQuestions = () => {
  };
 
 const startGame = () => {
-  getMeMyQuestions()
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
@@ -94,4 +93,8 @@ incrementScore = num => {
   scoreText.innerHTML = score;
 };
 
-finalScore.innerHTML = mostRecentScore;
+if (finalScore) {
+  finalScore.innerHTML = mostRecentScore;
+}
+
+getMeMyQuestions();

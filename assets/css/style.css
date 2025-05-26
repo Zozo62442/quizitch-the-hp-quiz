@@ -163,6 +163,18 @@ body {
   color: #D3AF37;
 }
 
+.choice-container.correct .choice-text {
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 0 0 8px #9eff9e;
+}
+
+.choice-container.incorrect .choice-text {
+  color: #fff1d0;
+  font-weight: bold;
+  text-shadow: 0 0 8px #f96666;
+}
+
 /* Hud */
 #hud {
   display: flex;
