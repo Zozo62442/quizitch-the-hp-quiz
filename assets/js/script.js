@@ -91,7 +91,15 @@ choices.forEach(choice => {
 incrementScore = num => {
   score += num;
   scoreText.innerHTML = score;
+
+  scoreText.classList.add("pulse");
+
+  scoreText.addEventListener("animationend", () => {
+    scoreText.classList.remove("pulse");
+  }, { once: true });
 };
+
+
 
 if (finalScore) {
   finalScore.innerHTML = mostRecentScore;
