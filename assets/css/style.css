@@ -41,6 +41,7 @@ body {
   padding: 2rem;
 }
 
+/* Background video */
 #backgroundvideo {
   position: fixed;
   top: 0;
@@ -52,6 +53,7 @@ body {
   opacity: 0.6; 
 }
 
+/* Containers */
 .container {
   max-width: 80rem;
   margin: auto;
@@ -191,7 +193,7 @@ body {
 
 /* Loader */
 #loader {
-  border: 0.9rem solid white;
+  border: 0.9rem solid #FFFFFF;
   border-radius: 50%;
   border-top: 0.9rem solid #D3AF37;
   width: 10rem;
@@ -206,6 +208,11 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* End Game */
+.score-end h2 {
+  color: var(--button-colour);
 }
 
 /* Media queries */
@@ -294,6 +301,10 @@ body {
   h2 {
     font-size: 3rem;
   }
+
+  #introduction {
+    font-size: 1.6rem;
+}
 
   p, .choice-container {
     font-size: 1.8rem;

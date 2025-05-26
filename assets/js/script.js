@@ -20,22 +20,22 @@ let availableQuestions = [];
 let questions = [];
 
 
-const getMeMyQuestions => {
+const getMeMyQuestions = () => {
   fetch("assets/data/questions.json")
-    .then((res) => return res.json())
+    .then((res) => res.json())
     .then((loadedQuestions) => {
         questions = loadedQuestions;
         startGame();
     })
 
     .catch((err) => console.error("Failed to load questions:", err));
- }
+ };
 
 const startGame = () => {
   getMeMyQuestions()
     questionCounter = 0;
     score = 0;
-    availableQuesions = [...questions];
+    availableQuestions = [...questions];
     getNewQuestion();
     game.classList.remove("hidden");
     loader.classList.add("hidden");
@@ -43,7 +43,7 @@ const startGame = () => {
 
 
 const getNewQuestion = () => {
-  if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+  if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     localStorage.setItem("mostRecentScore", score);
     return window.location.assign("end-game.html");
   }
@@ -51,8 +51,8 @@ const getNewQuestion = () => {
   progressText.innerHTML = questionCounter + "/" + MAX_QUESTIONS;
   progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
-  const questionIndex = Math.floor(Math.random() * availableQuesions.length);
-  currentQuestion = availableQuesions[questionIndex];
+  const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+  currentQuestion = availableQuestions[questionIndex];
   questionRef.innerHTML = currentQuestion.question;
 
   choices.forEach(choice => {
@@ -60,7 +60,7 @@ const getNewQuestion = () => {
     choice.innerHTML = currentQuestion["choice" + number];
   });
 
-  availableQuesions.splice(questionIndex, 1);
+  availableQuestions.splice(questionIndex, 1);
   acceptingAnswers = true;
 };
 
