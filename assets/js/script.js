@@ -72,18 +72,18 @@ choices.forEach(choice => {
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset.number;
 
-    let classToApply = 'incorrect';
+    let incorrectORCorrect = 'incorrect';
     if (selectedAnswer == currentQuestion.answer) {
-        classToApply = 'correct';
+        incorrectORCorrect = 'correct';
     }
-    if (classToApply === "correct") {
+    if (incorrectORCorrect === "correct") {
       incrementScore(CORRECT_POINTS);
     }
 
-    selectedChoice.parentElement.classList.add(classToApply);
+    selectedChoice.parentElement.classList.add(incorrectORCorrect);
 
     setTimeout(() => {
-      selectedChoice.parentElement.classList.remove(classToApply);
+      selectedChoice.parentElement.classList.remove(incorrectORCorrect);
       getNewQuestion();
     }, 1000);
   });
