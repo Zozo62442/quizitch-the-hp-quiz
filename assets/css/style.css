@@ -17,14 +17,28 @@
 h1 {
     font-family: var(--title-font);
     color: var(--title-colour);
-    font-size: 4rem;
+    font-size: 2.5rem;
 }
 
 h2 {
     font-family: var(--title-font);
-    color: var(--heading-colour);
-    font-size: 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    background: linear-gradient(45deg, #D3AF37, #6a5acd, #F42B03);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s infinite linear;
+    text-shadow: 0 0 10px #d3af3780;
+    }
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
 }
 
 p {
@@ -42,15 +56,8 @@ body {
 }
 
 /* Background video */
-#backgroundvideo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  z-index: -1; 
-  opacity: 0.6; 
+.video-container {
+  display: none;
 }
 
 /* Containers */
@@ -66,8 +73,18 @@ body {
 }
 
 .choice-container {
+  flex-direction: column;
   border-radius: 10px;
-    align-self: center;
+  font-size: 1.2rem;
+  align-self: center;
+}
+
+.choice-prefix {
+  padding: 1rem;
+  font-size: 1rem;
+}
+.choice-text {
+  padding: 1rem;
 }
 
 .flex-column {
@@ -96,6 +113,11 @@ body {
 #introduction {
     font-size: 1.2rem;
     padding-bottom: 1rem;
+}
+
+#start-button {
+  font-size: 0.9rem;
+  padding: 0.8rem 1.5rem;
 }
 
 /* Game view */
@@ -143,6 +165,10 @@ body {
 
 .pulse {
   animation: pulse 0.5s ease;
+}
+
+#progressBar {
+  width: 100%;
 }
 
 /* Choices */
@@ -243,26 +269,6 @@ body {
 }
 
 /* End Game */
-h2.score-end,
-h2.score-end i {
-  font-size: 2.5rem;
-  background: linear-gradient(45deg, #D3AF37, #6a5acd, #F42B03);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 4s infinite linear;
-  text-shadow: 0 0 10px #d3af3780;
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 200% 50%;
-  }
-}
-
 #end {
   padding: 4rem;
   text-align: center;
@@ -309,48 +315,6 @@ h2.score-end i {
 
 /* Media queries */
 
-/* Small devices (phones, less than 768px) */
-@media screen and (max-width: 767px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  p, .choice-container {
-    font-size: 1.2rem;
-  }
-
-  #start-button {
-    font-size: 0.9rem;
-    padding: 0.8rem 1.5rem;
-  }
-
-  .container {
-    padding: 2rem;
-  }
-
-  .choice-container {
-    flex-direction: column;
-  }
-
-  .choice-prefix {
-    padding: 1rem;
-    font-size: 1rem;
-  }
-
-  .choice-text {
-    padding: 1rem;
-  }
-
-  #progressBar {
-    width: 100%;
-  }
-}
-
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
   h1 {
@@ -359,10 +323,15 @@ h2.score-end i {
 
   h2 {
     font-size: 2.5rem;
+    margin-bottom: 4rem;
   }
 
   p, .choice-container {
     font-size: 1.5rem;
+  }
+
+  .choice-prefix {
+    font-size: 2rem;
   }
 
   .container {
@@ -381,6 +350,36 @@ h2.score-end i {
 
   #progressBar {
     width: 80%;
+  }
+
+.video-container {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  #backgroundvideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.9;
+  }
+
+  body {
+    background-color: transparent;
+    overflow-x: hidden; 
   }
 }
 
