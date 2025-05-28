@@ -105,7 +105,7 @@ Colour scheme was chosen based on the palette of energetic “sunrise” and “
 | CSS Name                 | HEX       | Comment                       |
 | ------------------------ | --------- | ----------------------------- |
 |     --title-colour       | #D3AF37 | Title text                    |
-|     --heading-colour     | #F42B03 | Questions and  sub-headings   |
+|     --heading-colours    | #D3AF37, #6a5acd, #F42B03| Questions and  sub-headings   |
 |     --bg-dark            | #080357 | Page background               |
 |     --text-colour        | #29524A | Quiz text                     |
 |     --quiz-colour        | #FFFFFF | Quiz section                  |
