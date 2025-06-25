@@ -126,15 +126,12 @@ Images and background images were sourced from getty images and from Unsplash.
   * One question shown at a time, pulled from an external `questions.json` file.
   * Multiple-choice options presented as styled buttons.
 * **Live Progress Tracker**:
-  * Displays the current question number out of the total (e.g., "3 of 10").
+  * Displays the current question number out of the total with a progress bar(e.g., "3 of 10").
   * Updates in real time as questions are answered.
 * **Live Score Display**:
   * Score counter updates instantly on correct answers.
 * **Smooth UI Experience**:
-  * Fade-in effect for each new question.
   * Shuffle logic ensures a fresh order for each quiz run.
-* **Responsive Layout**:
-  * Mobile-first design ensures smooth play on phones, tablets, and desktops.
 
 #### Result Screen
 * **Final Score Summary**:
@@ -197,7 +194,7 @@ Images and background images were sourced from getty images and from Unsplash.
 
 ## Bugs 
 
-The webpage was thoroughly tested. 3 bugs are still unresolved and require further investigation: 
+The webpage was tested, to which 4 bugs required further attention but are resolved:
 
 | Bug | Status | Description   | Steps To Resolve |
 | -------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -210,7 +207,7 @@ The webpage was thoroughly tested. 3 bugs are still unresolved and require furth
 
 ## Responsiveness Tests
 
-I launched the Quizitch Quiz website as early as possible in order to test its responsiveness. I used the DevTools from Firefox to confirm all of my changes.  To evaluate deployed versions, I used the external website [Responsive Design Checker](https://responsivedesignchecker.com/ "Responsive Design Checker"). To get a consistent view of various device breakpoints I used another external source:[Am I Responsive](https://ui.dev/amiresponsive "Am I responsive") website.
+I launched the Quizitch Quiz website as early as possible in order to test its responsiveness. I used the DevTools from Firefox and Google Chrome to confirm all of my changes. To evaluate deployed versions, I used the external website [Responsive Design Checker](https://responsivedesignchecker.com/ "Responsive Design Checker"). To get a consistent view of various device breakpoints I used another external source:[Am I Responsive](https://ui.dev/amiresponsive "Am I responsive") website.
 
 Final Test Results:
 
@@ -301,7 +298,7 @@ Mobile Lighthouse Test Results (Chrome):
 
 ## Browser Testing
 
-For browser testing I used Firefox, Google Chrome, Safari and Microsoft Edge to test for bugs and possible malfunctions. On the iPhone and iPad I tested both Safari and Firefox. The desktop versions were tested on Google Chrome, Firefox and Microsoft Edge. No significant problems were detected for either browsers or display types. 
+For browser testing I used Firefox, Google Chrome and Safari to test for bugs and possible malfunctions. On the iPhone and iPad I tested both Safari and Firefox. The desktop versions were tested on Google Chrome and Firefox. No significant problems were detected for either browsers or display types. 
 
 
 [Back to top](#contents)
@@ -332,6 +329,7 @@ _Any changes needed to the website can be made, committed, and pushed to GitHub.
 - Insightful feedback, advice and support:
 
     - [Simen Daehlin](https://github.com/Eventyret "Simen Daehlin")
+    - [Oisin Tohak]("Oisin Tohak") for the extra Tutor session for my second attempt of the assignment.
 
 - Code inspiration and learning content:
 
