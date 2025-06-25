@@ -204,13 +204,13 @@ The webpage was thoroughly tested. 3 bugs are still unresolved and require furth
 | Questions are not loading when starting the quiz. | Resolved | When pressing start on the quiz, the questions from my .json file would not load, and instead my placeholder text and questions would only appear. | I tried first posting the questions back into my script.js file to see if I may have made the .json file wrong. Then I used ... to step through my code line by line to see where my code stop running. There I discovered I had mispelled the word "question", which happened a few more times after. |
 | VS code stopped running. | Resolved | When run the VS code stopped answering or moving. | I figured out that I had accidentally made an infinite loop. |
 | Background video plays full screen on iPhone.| Resolved | With each new question, the background video pops-up to full screen on iOS mobile phones. | Made the background a solid colour for mobile versions, while for tablets and above screen sizes, the video is played. Could not get around iOS Safari system on phones. |
-
+| Issues with mobile view of the game | Resolved | The background video was taking up the whole top page and the questions were too large for the screen, causing lots of scrolling. Additionally the progress bar and the score points were spilled over and could not be seen. | Due to a lack of time, screens smaller than 767px pixels received their own media query to scale the layout down to their size. It may not be the mobile-first approach, yet it is with the time constraints the most effective and efficient manner to finish the project on time to meet the passing standards of the criteria.  |
 
 [Back to top](#contents)
 
 ## Responsiveness Tests
 
-I launched the Quizitch Quiz website as early as possible in order to test its responsiveness. I used the DevTools from Firefox to confirm all of my changes, with the mobile-first approach in mind.  To evaluate deployed versions, I used the external website [Responsive Design Checker](https://responsivedesignchecker.com/ "Responsive Design Checker"). To get a consistent view of various device breakpoints I used another external source:[Am I Responsive](https://ui.dev/amiresponsive "Am I responsive") website.
+I launched the Quizitch Quiz website as early as possible in order to test its responsiveness. I used the DevTools from Firefox to confirm all of my changes.  To evaluate deployed versions, I used the external website [Responsive Design Checker](https://responsivedesignchecker.com/ "Responsive Design Checker"). To get a consistent view of various device breakpoints I used another external source:[Am I Responsive](https://ui.dev/amiresponsive "Am I responsive") website.
 
 Final Test Results:
 
@@ -232,12 +232,13 @@ Final Test Results:
 
 ### HTML
 
-I validated and tested all html files [W3C HTML Validation Service](... "W3C HTML"), which came back with no errors.
+I validated and tested all html files [W3C HTML Validation Service](https://validator.w3.org/ "W3C HTML"), which came back with no significant errors.
 
 * Main Quizitch Page:
 
-![W3C HTML Validator](docs/html-validator.png "W3C HTML Validator index.html")
-
+![W3C HTML Validator Start](docs/index.html-validator.png "W3C HTML Validator index.html")
+![W3C HTML Validator Game View](docs/game.html-validator.png "W3C HTML Validator index.html")
+![W3C HTML Validator End Score View](docs/end-game.html-validator.png "W3C HTML Validator index.html")
 
 [Back to top](#contents)
 
